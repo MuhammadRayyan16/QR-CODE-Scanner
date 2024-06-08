@@ -9,7 +9,7 @@ const App = () => {
     <div style={styles.container}>
       <h1>SCAN QR CODE</h1>
       <div style={styles.qrContainer}>
-        <QRCode value=" YOU WIN 10LAK RUPEES " />
+        <QRCode value=" YOU WIN 10Million RUPEES " />
       </div >
     </div>
   );
