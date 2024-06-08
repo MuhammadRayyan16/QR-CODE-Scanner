@@ -1,25 +1,46 @@
-import logo from './logo.svg';
+// src/App.js
+import React from 'react';
+import QRCode from 'react-qr-code';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div style={styles.container}>
+      <h1>SCAN QR CODE</h1>
+      <div style={styles.qrContainer}>
+        <QRCode value=" YOU WIN 10LAK RUPEES " />
+      </div >
     </div>
   );
-}
+};
+
+const styles = {
+  container: {
+
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100vh',
+    backgroundColor: 'teal',
+  },
+  qrContainer: {
+    backgroundColor: 'white',
+    padding: '16px',
+    marginBottom: '20px',
+  },
+  responsiveContainer: {
+    height: 'auto',
+    margin: '0 auto',
+    maxWidth: 256,
+    width: '100%',
+  },
+  qrCode: {
+    height: 'auto',
+    maxWidth: '100%',
+    width: '100%',
+  },
+};
 
 export default App;
